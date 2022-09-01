@@ -56,7 +56,8 @@ What went wrong / was challenging, how'd you figure it out, and what did you lea
 Your readme will have various images and gifs on it. Upload a test image and test gif to make sure you've got the process figured out. Pick whatever image and gif you want!
 
 ### Test Link
-
+[slay](https://github.com/gdaless20/Engineering_4_Notebook/blob/main/test.py)
 ### Test Image
-
+![Walter](images/breaking-bad-chemistry.gif)  
 ### Test GIF
+![Green](images/download.png)  
