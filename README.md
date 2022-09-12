@@ -8,22 +8,19 @@
 
 &nbsp;
 
-## Raspberry_Pi_Assignment_Template
+## Launch Pad Part 1 (Countdown)
 
 ### Assignment Description
 
-Write your assignment description here. What is the purpose of this assignment? It should be at least a few sentences.
+Today Ellen and I wrote code to make a countdown from 10 on the serial monitor. We did this to later incorporate into our final python assingment. 
 
 ### Evidence 
 
-Pictures / Gifs of your work should go here. You need to communicate what your thing does. 
+![Countdown](https://github.com/gdaless20/Engineering_4_Notebook/blob/main/images/Untitled.mp4)  
 
-### Wiring
-
-This may not be applicable to all assignments. Anything where you wire something up, include the wiring diagram here. The diagram should be clear enough that I can recreate the wiring from scratch. 
 
 ### Code
-Give me a link to your code. [Something like this](https://github.com/millerm22/Engineering_4_Notebook/blob/main/Raspberry_Pi/hello_world.py). Don't make me hunt through your folders, give me a nice link to click to take me there! Remember to **COMMENT YOUR CODE** if you want full credit. 
+[Something like this](raspberry-pi/Countdown.py).
 
 ### Reflection
 
