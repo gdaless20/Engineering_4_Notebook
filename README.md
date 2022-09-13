@@ -20,13 +20,11 @@ Today Ellen and I wrote code to make a countdown from 10 on the serial monitor. 
 
 
 ### Code
-[Something like this](raspberry-pi/Countdown.py).
+[My code](raspberry-pi/Countdown.py).
 
 ### Reflection
 
-What went wrong / was challenging, how'd you figure it out, and what did you learn from that experience? Your goal for the reflection is to pass on knowledge that will make this assignment better or easier for the next person. Think about your audience for this one, which may be "future you" (when you realize you need some of this code in three months), me, or your college admission committee!
-
-&nbsp;
+We had some difficulty getting the countdown to count down from ten as apposed to counting up from 1 but other than that this task was pretty straight foward.
 
 ## Onshape_Assignment_Template
 
