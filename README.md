@@ -54,19 +54,19 @@ Today Ellen and I created code to make the coundown and lights start when we pre
 
 ### Evidence 
 
-![Button](https://github.com/gdaless20/Engineering_4_Notebook/blob/main/images/ezgif.com-gif-maker%20(1)%20(1)%20(1).mp4)  
+![Button](https://github.com/gdaless20/Engineering_4_Notebook/blob/main/images/Count_button_gif.mp4)  
 
 ### Code
 
-[Lights+Countdown](https://github.com/gdaless20/Engineering_4_Notebook/blob/main/raspberry-pi/Countdown%2BLights)
+[Countdown+Button](https://github.com/gdaless20/Engineering_4_Notebook/blob/main/raspberry-pi/Button%20added)
 
 ### Wiring
 
-[Wiring Diagram](https://github.com/gdaless20/Engineering_4_Notebook/blob/main/images/FD7E07F7-CF40-4487-B81E-83630421DA96.jpeg)
+[Wiring Diagram](https://github.com/gdaless20/Engineering_4_Notebook/blob/main/images/B2891F05-A75D-4551-ACE8-1FF7697E1B06.jpeg)
 
 ### Reflection
 
-We struggled getting the correct to light up as we forgot to originally label our LEDS. Another issue we had is that one of our lights wasnt working and we thought it was our code originally. 
+We didnt have too many issues with this assignment as it was pretty straight foward. It took us a little to figure out the correct commands to correctly use the button with our pre-existing code.
 
 ## Onshape_Assignment_Template
 
