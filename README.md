@@ -1,11 +1,7 @@
 # Engineering_4_Notebook
 
 &nbsp;
-
-## Table of Contents
-* [Onshape_Assignment_Template](#Onshape_Assignment_Template)
-* [Launch_Pad_Part_1_(Countdown)](#Launch_Pad_Part_1_(Countdown))
-
+### My Table of Contents Never Works:(
 &nbsp;
 
 ## Launch_Pad_Part_1_(Countdown)
