@@ -3,7 +3,6 @@
 &nbsp;
 
 ## Table of Contents
-* [Raspberry_Pi_Assignment_Template](#Raspberry_Pi_Assignment_Template)
 * [Onshape_Assignment_Template](#Onshape_Assignment_Template)
 
 &nbsp;
@@ -25,6 +24,28 @@ Today Ellen and I wrote code to make a countdown from 10 on the serial monitor. 
 ### Reflection
 
 We had some difficulty getting the countdown to count down from ten as apposed to counting up from 1 but other than that this task was pretty straight foward.
+
+## Launch Pad Part 2 (Lights)
+
+### Assignment Description
+
+Today Ellen and I created code to make a red light flash as the serial monitor counts down from ten and then flashes a red light when the word 'launch' is printed. We wrote this code as a part of our 4pt pyhton assignment.
+
+### Evidence 
+
+![Lights+Countdown](https://github.com/gdaless20/Engineering_4_Notebook/blob/main/images/ezgif.com-gif-maker%20(1)%20(1)%20(1).mp4)  
+
+
+### Code
+
+[]()
+
+## Wiring
+
+[]()
+
+### Reflection
+
 
 ## Onshape_Assignment_Template
 
