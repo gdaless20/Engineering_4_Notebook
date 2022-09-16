@@ -17,7 +17,6 @@ Today Ellen and I wrote code to make a countdown from 10 on the serial monitor. 
 
 ![Countdown](https://github.com/gdaless20/Engineering_4_Notebook/blob/main/images/Untitled.mp4)  
 
-
 ### Code
 [My code](raspberry-pi/Countdown.py).
 
@@ -35,17 +34,39 @@ Today Ellen and I created code to make a red light flash as the serial monitor c
 
 ![Lights+Countdown](https://github.com/gdaless20/Engineering_4_Notebook/blob/main/images/ezgif.com-gif-maker%20(1)%20(1)%20(1).mp4)  
 
-
 ### Code
 
-[]()
+[Lights+Countdown](https://github.com/gdaless20/Engineering_4_Notebook/blob/main/raspberry-pi/Countdown%2BLights)
 
-## Wiring
+### Wiring
 
-[]()
+[Wiring Diagram](https://github.com/gdaless20/Engineering_4_Notebook/blob/main/images/FD7E07F7-CF40-4487-B81E-83630421DA96.jpeg)
 
 ### Reflection
 
+We struggled getting the correct to light up as we forgot to originally label our LEDS. Another issue we had is that one of our lights wasnt working and we thought it was our code originally. 
+
+## Launch Pad Part 3 (Button)
+
+### Assignment Description
+
+Today Ellen and I created code to make the coundown and lights start when we press a button. This is for our 4pt pyhton assignment.
+
+### Evidence 
+
+![Button](https://github.com/gdaless20/Engineering_4_Notebook/blob/main/images/ezgif.com-gif-maker%20(1)%20(1)%20(1).mp4)  
+
+### Code
+
+[Lights+Countdown](https://github.com/gdaless20/Engineering_4_Notebook/blob/main/raspberry-pi/Countdown%2BLights)
+
+### Wiring
+
+[Wiring Diagram](https://github.com/gdaless20/Engineering_4_Notebook/blob/main/images/FD7E07F7-CF40-4487-B81E-83630421DA96.jpeg)
+
+### Reflection
+
+We struggled getting the correct to light up as we forgot to originally label our LEDS. Another issue we had is that one of our lights wasnt working and we thought it was our code originally. 
 
 ## Onshape_Assignment_Template
 
