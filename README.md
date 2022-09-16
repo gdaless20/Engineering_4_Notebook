@@ -4,10 +4,11 @@
 
 ## Table of Contents
 * [Onshape_Assignment_Template](#Onshape_Assignment_Template)
+* [Launch_Pad_Part_1_(Countdown)](#Launch_Pad_Part_1_(Countdown))
 
 &nbsp;
 
-## Launch Pad Part 1 (Countdown)
+## Launch_Pad_Part_1_(Countdown)
 
 ### Assignment Description
 
