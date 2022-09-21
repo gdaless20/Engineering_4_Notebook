@@ -65,6 +65,28 @@ Today Ellen and I created code to make the coundown and lights start when we pre
 
 We didnt have too many issues with this assignment as it was pretty straight foward. It took us a little to figure out the correct commands to correctly use the button with our pre-existing code.
 
+## Launch Pad Part 4 (Servo)
+
+### Assignment Description
+
+Today Ellen and I created code to make the coundown and lights start when we press a button and at the end it will make a servo turn at 180 degrees. This is for our 4pt pyhton assignment.
+
+### Evidence 
+
+![Servo](https://github.com/gdaless20/Engineering_4_Notebook/blob/main/images/IMG-4190.MOV)  
+
+### Code
+
+[Servo](https://github.com/gdaless20/Engineering_4_Notebook/blob/main/raspberry-pi/Servo)
+
+### Wiring
+
+[Wiring Diagram](https://github.com/gdaless20/Engineering_4_Notebook/blob/main/images/B2891F05-A75D-4551-ACE8-1FF7697E1B06.jpeg)
+
+### Reflection
+
+The servo code was given in the assignment, and you just had to add it on to the end of the While True so the assigment went pretty smoothly. We were in the wrong pin because I thought that the 7th pin down was GP7, but it was actually GP5 so once we had that figured out the servo worked and we were done.
+
 ## Onshape_Assignment_Template
 
 ### Assignment Description
