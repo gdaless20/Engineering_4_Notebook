@@ -81,7 +81,7 @@ Today Ellen and I created code to make the coundown and lights start when we pre
 
 ### Wiring
 
-[Wiring Diagram](https://github.com/gdaless20/Engineering_4_Notebook/blob/main/images/B2891F05-A75D-4551-ACE8-1FF7697E1B06.jpeg)
+[Wiring Diagram](https://github.com/gdaless20/Engineering_4_Notebook/blob/main/images/605AF562-1631-4CA0-96F3-7A6D2509CADD.jpeg)
 
 ### Reflection
 
