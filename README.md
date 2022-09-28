@@ -87,23 +87,29 @@ Today Ellen and I created code to make the coundown and lights start when we pre
 
 The servo code was given in the assignment, and you just had to add it on to the end of the While True so the assigment went pretty smoothly. We were in the wrong pin because I thought that the 7th pin down was GP7, but it was actually GP5 so once we had that figured out the servo worked and we were done.
 
-## Onshape_Assignment_Template
+## Crash Avoidance Part 1
 
 ### Assignment Description
 
-Write your assignment description here. What is the purpose of this assignment? It should be at least a few sentences.
+Today Ellen and I created code to make an accelerometer that continuously reports x, y, and z acceleration values on our serial monitor.
 
-### Part Link 
+### Evidence 
 
-[Create a link to your Onshape document](https://cvilleschools.onshape.com/documents/003e413cee57f7ccccaa15c2/w/ea71050bb283bf3bf088c96c/e/c85ae532263d3b551e1795d0?renderMode=0&uiState=62d9b9d7883c4f335ec42021). Don't forget to turn on link sharing in your Onshape document so that others can see it. 
+![Servo](https://github.com/gdaless20/Engineering_4_Notebook/blob/main/images/IMG-4190.MOV)  
 
-### Part Image
+### Code
 
-Take a nice screenshot of your Onshape document. 
+[Servo](https://github.com/gdaless20/Engineering_4_Notebook/blob/main/raspberry-pi/Servo)
+
+### Wiring
+
+[Wiring Diagram](https://github.com/gdaless20/Engineering_4_Notebook/blob/main/images/605AF562-1631-4CA0-96F3-7A6D2509CADD.jpeg)
 
 ### Reflection
 
-What went wrong / was challenging, how'd you figure it out, and what did you learn from that experience? Your goal for the reflection is to pass on knowledge that will make this assignment better or easier for the next person. Think about your audience for this one, which may be "future you" (when you realize you need some of this code in three months), me, or your college admission committee!
+The servo code was given in the assignment, and you just had to add it on to the end of the While True so the assigment went pretty smoothly. We were in the wrong pin because I thought that the 7th pin down was GP7, but it was actually GP5 so once we had that figured out the servo worked and we were done.
+
+
 
 &nbsp;
 
