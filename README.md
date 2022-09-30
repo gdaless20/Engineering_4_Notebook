@@ -99,7 +99,7 @@ Today Ellen and I created code to make an accelerometer that continuously report
 
 ### Code
 
-[Servo](https://github.com/gdaless20/Engineering_4_Notebook/blob/main/raspberry-pi/Servo)
+[Code](https://github.com/gdaless20/Engineering_4_Notebook/blob/main/raspberry-pi/Crashavoidance1)
 
 ### Wiring
 
