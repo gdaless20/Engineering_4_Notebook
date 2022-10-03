@@ -95,7 +95,7 @@ Today Ellen and I created code to make an accelerometer that continuously report
 
 ### Evidence 
 
-![Servo](https://github.com/gdaless20/Engineering_4_Notebook/blob/main/images/IMG-4190.MOV)  
+![Servo](https://github.com/gdaless20/Engineering_4_Notebook/blob/main/images/P1.gif)  
 
 ### Code
 
@@ -107,8 +107,29 @@ Today Ellen and I created code to make an accelerometer that continuously report
 
 ### Reflection
 
-The servo code was given in the assignment, and you just had to add it on to the end of the While True so the assigment went pretty smoothly. We were in the wrong pin because I thought that the 7th pin down was GP7, but it was actually GP5 so once we had that figured out the servo worked and we were done.
+This was fairly simple, once we had the right libraries moved into our circuitpy, we used the code from the assignment we were basically there.
 
+## Crash Avoidance Part 2
+
+### Assignment Description
+
+We had to get an accelerometer working so that when it was 90 degrees an led would turn on.
+
+### Evidence 
+
+![Servo](https://github.com/gdaless20/Engineering_4_Notebook/blob/main/images/CA2.gif)  
+
+### Code
+
+[Code](https://github.com/gdaless20/Engineering_4_Notebook/blob/main/raspberry-pi/Crashavoidance2)
+
+### Wiring
+
+[Wiring Diagram](https://github.com/gdaless20/Engineering_4_Notebook/blob/main/images/605AF562-1631-4CA0-96F3-7A6D2509CADD.jpeg)
+
+### Reflection
+
+This was fairly simple, once we had the right libraries moved into our circuitpy, we used the code from the assignment we were basically there.
 
 
 &nbsp;
