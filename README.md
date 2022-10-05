@@ -129,8 +129,7 @@ We had to get an accelerometer working so that when it was 90 degrees an led wou
 
 ### Reflection
 
-This was fairly simple, once we had the right libraries moved into our circuitpy, we used the code from the assignment we were basically there.
-
+I messed up the led wiring and almost blew up an LED but after i fixed that issue our code worked well! We additionally had to retake our video a couple times because Ellen kept cussing in the video.
 
 &nbsp;
 
