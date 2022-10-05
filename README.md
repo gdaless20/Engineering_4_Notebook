@@ -8,7 +8,7 @@
 
 ### Assignment Description
 
-Today Ellen and I wrote code to make a countdown from 10 on the serial monitor. We did this to later incorporate into our final python assingment. 
+Today Ellen and I wrote code to make a countdown from 10 on the serial monitor. We had to write code to import the pico correctly and ensure we had all the downloaded extensions. We did this to incorporate it into our final python assignment later. 
 
 ### Evidence 
 
@@ -19,7 +19,7 @@ Today Ellen and I wrote code to make a countdown from 10 on the serial monitor. 
 
 ### Reflection
 
-We had some difficulty getting the countdown to count down from ten as apposed to counting up from 1 but other than that this task was pretty straight foward.
+We had some difficulty getting the countdown to count down from ten as opposed to counting up from 1, but other than that, this task was pretty straightforward. Another minor issue was figuring out the best way to run the pico, as this was our first assignment. Thankfully there was no wiring, and we could get this assignment done relatively quickly.
 
 ## Launch Pad Part 2 (Lights)
 
