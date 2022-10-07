@@ -25,7 +25,7 @@ We had some difficulty getting the countdown to count down from ten as opposed t
 
 ### Assignment Description
 
-Today Ellen and I created code to make a red light flash as the serial monitor counts down from ten and then flashes a red light when the word 'launch' is printed. We wrote this code as a part of our 4pt pyhton assignment.
+Today Ellen and I created code to make a red light flash as the serial monitor counts down from ten and then flashes a red light when the word 'launch' is printed. We wrote this code as a part of our 4pt python assignment. This will be useful later in the year if we need LEDs for our project or something that functions similarly through code or practice.
 
 ### Evidence 
 
@@ -41,13 +41,13 @@ Today Ellen and I created code to make a red light flash as the serial monitor c
 
 ### Reflection
 
-We struggled getting the correct to light up as we forgot to originally label our LEDS. Another issue we had is that one of our lights wasnt working and we thought it was our code originally. 
+We struggled to get the correct light to light up during the countdown. We eventually figured out the problem was that we had misidentified our LEDs, so it's important to label things because it makes things more organized and easier to use or understand later. This assignment will be helpful in the following two launch pad assignments along with our pi in the sky project.
 
 ## Launch Pad Part 3 (Button)
 
 ### Assignment Description
 
-Today Ellen and I created code to make the coundown and lights start when we press a button. This is for our 4pt pyhton assignment.
+This is for our 4 part python assignment. Today Ellen and I created code to make the countdown and lights start when we press a button. We did this to mimic a realistic countdown that is started with an ignition.
 
 ### Evidence 
 
@@ -63,7 +63,7 @@ Today Ellen and I created code to make the coundown and lights start when we pre
 
 ### Reflection
 
-We didnt have too many issues with this assignment as it was pretty straight foward. It took us a little to figure out the correct commands to correctly use the button with our pre-existing code.
+So as a group with minimal experience and a strong dislike for coding, this took a lot of questioning and thinking. We were adding to our previous code and wiring, but we have never used a button, much less coded for it, so that was new. Our main issue was that we didn't know where to put the new code (again).
 
 ## Launch Pad Part 4 (Servo)
 
@@ -85,7 +85,7 @@ Today Ellen and I created code to make the coundown and lights start when we pre
 
 ### Reflection
 
-The servo code was given in the assignment, and you just had to add it on to the end of the While True so the assigment went pretty smoothly. We were in the wrong pin because I thought that the 7th pin down was GP7, but it was actually GP5 so once we had that figured out the servo worked and we were done.
+The servo code was given in the assignment, and you just had to add it to the end of the While True, so the assignment went pretty smoothly. I ignored the pin map, which was probably the disconnect. We were in the wrong pin because I thought the 7th pin down was GP7, but it was GP5, so once we had that figured out, the servo worked, and we were done.
 
 ## Crash Avoidance Part 1
 
