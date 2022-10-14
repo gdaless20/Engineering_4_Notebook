@@ -12,10 +12,16 @@ Today Ellen and I wrote code to make a countdown from 10 on the serial monitor. 
 
 ### Evidence 
 
-![Countdown](https://github.com/gdaless20/Engineering_4_Notebook/blob/main/images/Untitled.mp4)  
+![evidence](images/Launchpad1GIF.gif)  
 
 ### Code
-[My code](raspberry-pi/Countdown.py).
+```
+import time    #time variable
+for x in range(10,0,-1):  #counting range of numbers
+    print(x)         #says each number
+    time.sleep (1)   #rest 1 sec for a pause
+print("LAUNCHY")     #say this at the end of 10s
+```
 
 ### Reflection
 
@@ -29,12 +35,31 @@ Today Ellen and I created code to make a red light flash as the serial monitor c
 
 ### Evidence 
 
-![Lights+Countdown](https://github.com/gdaless20/Engineering_4_Notebook/blob/main/images/ezgif.com-gif-maker%20(1)%20(1)%20(1).mp4)  
+![Lights+Countdown](images/Launchpad2.gif)  
 
 ### Code
 
-[Lights+Countdown](https://github.com/gdaless20/Engineering_4_Notebook/blob/main/raspberry-pi/Countdown%2BLights)
+```
+import time #Imports variables
+import board
+import digitalio 
 
+led1 = digitalio.DigitalInOut(board.GP13) #says that the first led is at pin 13
+led1.direction = digitalio.Direction.OUTPUT #gives direcction
+led2 = digitalio.DigitalInOut(board.GP18) #says the second led is at pin 18
+led2.direction = digitalio.Direction.OUTPUT #gives direction
+
+for x in reversed(range(11)): 
+    led1.value = True #turns light on
+    time.sleep(0.5) #wait time
+    print(x) #tells it what to say
+    led1.value = False #turns led off
+    time.sleep(0.5) #wait time
+while True:
+    print("liftoff!") #says liftoff
+    led2.value = True #turns red light on
+    time.sleep(0.5) #tells it when to sleep
+```
 ### Wiring
 
 [Wiring Diagram](https://github.com/gdaless20/Engineering_4_Notebook/blob/main/images/FD7E07F7-CF40-4487-B81E-83630421DA96.jpeg)
