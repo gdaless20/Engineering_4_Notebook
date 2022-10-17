@@ -62,7 +62,7 @@ while True:
 ```
 ### Wiring
 
-[Wiring Diagram](https://github.com/gdaless20/Engineering_4_Notebook/blob/main/images/FD7E07F7-CF40-4487-B81E-83630421DA96.jpeg)
+[Diagram](images/Wiringdiagram1.jpg)
 
 ### Reflection
 
