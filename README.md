@@ -88,7 +88,7 @@ This is for our 4 part python assignment. Today Ellen and I created code to make
 
 ### Reflection
 
-So as a group with minimal experience and a strong dislike for coding, this took a lot of questioning and thinking. We were adding to our previous code and wiring, but we have never used a button, much less coded for it, so that was new. Our main issue was that we didn't know where to put the new code (again).
+So as a group with minimal experience and a strong dislike for coding, this took a lot of questioning and thinking. We were adding to our previous code and wiring, but we have never used a button, much less coded for it, so that was new. Our main issue was that we didn't know where to put the new code (again). We had to figure out how to use the correct imports in order to print the correct code.
 
 ## Launch Pad Part 4 (Servo)
 
