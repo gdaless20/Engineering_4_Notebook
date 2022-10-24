@@ -76,15 +76,40 @@ This is for our 4 part python assignment. Today Ellen and I created code to make
 
 ### Evidence 
 
-![Button](https://github.com/gdaless20/Engineering_4_Notebook/blob/main/images/Count_button_gif.mp4)  
+![Button](images/butt1.gif)  
 
 ### Code
 
-[Countdown+Button](https://github.com/gdaless20/Engineering_4_Notebook/blob/main/raspberry-pi/Button%20added)
+```
+import time #imports
+import board
+import digitalio
+
+led1 = digitalio.DigitalInOut(board.GP13) #pins 
+led1.direction = digitalio.Direction.OUTPUT
+led2 = digitalio.DigitalInOut(board.GP18)
+led2.direction = digitalio.Direction.OUTPUT
+button = digitalio.DigitalInOut(board.GP16) #adds in the button
+button.direction = digitalio.Direction.INPUT
+button.pull = digitalio.Pull.UP #incorperates the button into the circuit
+
+while True: #if the button is pressed this will happen
+     if button.value == False:
+          for x in reversed(range(11)):
+               led1.value = True #light on
+               time.sleep(0.5) #light rest
+               print(x)
+               led1.value = False #light off
+               time.sleep(0.5)
+          while True:
+               print("liftoff!") #prints liftoff
+               led2.value = True
+               time.sleep(0.5)
+```
 
 ### Wiring
 
-[Wiring Diagram](https://github.com/gdaless20/Engineering_4_Notebook/blob/main/images/B2891F05-A75D-4551-ACE8-1FF7697E1B06.jpeg)
+[Wiring Diagram](images/B2891F05-A75D-4551-ACE8-1FF7697E1B06.jpeg)
 
 ### Reflection
 
@@ -98,11 +123,44 @@ Today Ellen and I created code to make the coundown and lights start when we pre
 
 ### Evidence 
 
-![Servo](https://github.com/gdaless20/Engineering_4_Notebook/blob/main/images/IMG-4190.MOV)  
+![Servo](images/this1.gif)  
 
 ### Code
 
-[Servo](https://github.com/gdaless20/Engineering_4_Notebook/blob/main/raspberry-pi/Servo)
+```
+import time    #importing stuff
+import board
+import digitalio
+import pwmio 
+from adafruit_motor import servo
+
+led1 = digitalio.DigitalInOut(board.GP13)
+led1.direction = digitalio.Direction.OUTPUT
+led2 = digitalio.DigitalInOut(board.GP18)
+led2.direction = digitalio.Direction.OUTPUT
+button = digitalio.DigitalInOut(board.GP16)  #what stuff is going in vs out and where it's at
+button.direction = digitalio.Direction.INPUT
+button.pull = digitalio.Pull.UP
+pwm_servo = pwmio.PWMOut(board.GP5, duty_cycle=2 ** 15, frequency=50)  #setting up servo
+servo1 = servo.Servo(pwm_servo, min_pulse=500, max_pulse=2500)
+
+servo1.angle = 0
+
+
+while True: 
+     if button.value == False:    #so when we aren't pressing it anymore
+          for x in reversed(range(11)):
+               led1.value = True
+               time.sleep(0.5)     #rest a sec between counts
+               print(x)
+               led1.value = False
+               time.sleep(0.5)
+          while True:
+               print("liftoff!")     #say liftoff
+               led2.value = True
+               servo1.angle = 180     #turn180
+               time.sleep(0.5)
+ ```
 
 ### Wiring
 
