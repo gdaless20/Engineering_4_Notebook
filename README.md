@@ -245,6 +245,7 @@ while True:
     else:
         led_1.value = False  #if not led is off
 ```
+
 ### Wiring
 
 [Wiring Diagram](images/A1C4311C-59DF-4F92-8CC7-69A7C77432B8.jpeg)
@@ -367,6 +368,8 @@ while True:
 
 except:
         print("Please input valid coordinates (remember format x,y)")  # if u suck, it lets you know
+```
+
 Reflection
 Using Try, you can input different coordinates and it allows you to try them, however you can use except with it so that when incorrect coordinates are used it stops the code and tells you to retry. This is convenient and fairly simple to use which makes it something you can use in mnay different code setups. The area formulas take your given coordinates and do the math of getting the triangle area for you, saving you time and braincells.
 
@@ -382,6 +385,7 @@ I had to get my serial monitor to take my chosen coordinates of a triangle and t
 ![evidence](images/fu1.gif)  
 
 ### Code
+
 ```
 import math
 import board
@@ -454,6 +458,7 @@ while True:
     except:
         print("Please input valid coordinates (remember format x,y)") #u suck, fix it
 ```
+
 ### Wiring
 
 ![evidence](images/IMG_9306.jpg)  
@@ -475,6 +480,7 @@ I had to write code so that whatever message you type in is then translated into
 ![evidence](images/cheese1.gif)  
 
 ### Code
+
 ```
 MORSE_CODE = { 'A':'.-', 'B':'-...',  #dictionary
     'C':'-.-.', 'D':'-..', 'E':'.',
@@ -521,6 +527,7 @@ I had to write code so that when you type a mesage into the terminal, it's trans
 ![evidence](images/cheesestring.gif)  
 
 ### Code
+
 ```
 import board
 import digitalio
