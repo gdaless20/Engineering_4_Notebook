@@ -327,6 +327,73 @@ while True:
 
 I forgot to use the code to find the addresses of the devices so that tripped me up for a while. To find the addresses, run this code and be sure to check which address is for each device. Also be sure to check your wiring because i2c wiring is always off 2 pins. Additionally i felt the wiring was a little tricky as the OLED screen uses different pin inputs and outputs and i had to make sure to line up the correct Data and Rst pins.
 
+## Landing Area pt 1
+
+### Assignment Description
+
+
+### Evidence 
+
+![evidence]()  
+
+### Code
+```
+
+```
+
+### Reflection
+
+## Landing Area pt 2
+
+### Assignment Description
+
+
+### Evidence 
+
+![evidence]()  
+
+### Code
+```
+
+```
+
+### Reflection
+
+
+## Morse Code pt 1
+
+### Assignment Description
+
+
+### Evidence 
+
+![evidence]()  
+
+### Code
+```
+
+```
+
+### Reflection
+
+
+## Morse Code pt 2
+
+### Assignment Description
+
+
+### Evidence 
+
+![evidence]()  
+
+### Code
+```
+
+```
+
+### Reflection
+
+
 &nbsp;
 
 ## Media Test
