@@ -178,41 +178,154 @@ Today Ellen and I created code to make an accelerometer that continuously report
 
 ### Evidence 
 
-![Servo](https://github.com/gdaless20/Engineering_4_Notebook/blob/main/images/P1.gif)  
+![Servo](images/P1.gif)  
 
 ### Code
 
-[Code](https://github.com/gdaless20/Engineering_4_Notebook/blob/main/raspberry-pi/Crashavoidance1)
+```
+import time #imports
+import board
+import adafruit_mpu6050
+import busio
 
+sda_pin = board.GP14 #Sda connect
+scl_pin = board.GP15 #Scl connect 
+i2c = busio.I2C(scl_pin, sda_pin) 
+mpu = adafruit_mpu6050.MPU6050(i2c) #Mpu adafruit
+
+while True:
+    print("Acceleration: X:%.2f, Y: %.2f, Z: %.2f m/s^2" % (mpu.acceleration)) #prints co-ords
+    print("Gyro X:%.2f, Y: %.2f, Z: %.2f rad/s" % (mpu.gyro)) 
+    print("Temperature: %.2f C" % mpu.temperature) #prints temp
+    print("")
+    time.sleep(1) 
+ ```
 ### Wiring
 
-[Wiring Diagram](https://github.com/gdaless20/Engineering_4_Notebook/blob/main/images/605AF562-1631-4CA0-96F3-7A6D2509CADD.jpeg)
+![Alt](images/9CAC5397-E05C-4929-ADF3-46F928FDD3FE.jpeg)  
 
 ### Reflection
 
-This was fairly simple, once we had the right libraries moved into our circuitpy, we used the code from the assignment we were basically there.
+After downloading the necessary folder modules needed for this code, it goes pretty smoothly. You need to have Acceleration, temperature, and gyro in order to find all the values for the assignment. Don't be alarmed by the ~9.8 because that's just gravity and is not going to mess with your values or anything. There was no wiring so i helped ellen with doing research on how to complete the code.
 
 ## Crash Avoidance Part 2
 
 ### Assignment Description
 
-We had to get an accelerometer working so that when it was 90 degrees an led would turn on.
+We had to get an accelerometer working so that when it was 90 degrees an led would turn on along with having a powerboost.
 
 ### Evidence 
 
-![Servo](https://github.com/gdaless20/Engineering_4_Notebook/blob/main/images/CA2.gif)  
+![Led](images/CA2.gif)  
 
 ### Code
 
-[Code](https://github.com/gdaless20/Engineering_4_Notebook/blob/main/raspberry-pi/Crashavoidance2)
+```
+import board  #import stuff
+import adafruit_mpu6050
+import busio 
+import time
+import digitalio 
 
+led_1 = digitalio.DigitalInOut(board.GP18)   #led setup
+led_1.direction = digitalio.Direction.OUTPUT
+sda_pin = board.GP14   #setup pico
+scl_pin = board.GP15
+i2c = busio.I2C(scl_pin, sda_pin)
+mpu = adafruit_mpu6050.MPU6050(i2c)
+
+
+while True:
+    print(mpu.acceleration)   #say the values
+    time.sleep(.5)
+
+    if mpu.acceleration[0] < -9 or mpu.acceleration[0] > 9:
+        led_1.value = True  #at 90 degrees led is on
+
+    else:
+        led_1.value = False  #if not led is off
+```
 ### Wiring
 
-[Wiring Diagram](https://github.com/gdaless20/Engineering_4_Notebook/blob/main/images/605AF562-1631-4CA0-96F3-7A6D2509CADD.jpeg)
+[Wiring Diagram](images/A1C4311C-59DF-4F92-8CC7-69A7C77432B8.jpeg)
 
 ### Reflection
 
-I messed up the led wiring and almost blew up an LED but after i fixed that issue our code worked well! We additionally had to retake our video a couple times because Ellen kept cussing in the video.
+I messed up the led wiring and almost blew up an LED but after i fixed that issue our code worked well! After importing everything you setup your led and wiring (double check that you are in the correct pins, i2c are still 2 pins off). The only thing you have to make sure you do is have the correct angle and degrees for the mpu.acceleration, we want it at 90 so when it's vertical the light will come on.
+
+
+## Crash Avoidance Part 3
+
+### Assignment Description
+
+I had to get my led to blink at 90 degrees and print gyro xyz values onto a screen as well.
+
+### Evidence 
+
+![Led](images/CA3.gif)  
+
+### Code
+
+```
+import board  #imports
+import adafruit_mpu6050
+import busio 
+import time
+import digitalio 
+import terminalio
+import displayio
+from adafruit_display_text import label
+import adafruit_displayio_ssd1306
+
+displayio.release_displays()
+sda_pin = board.GP14   #setup pico
+scl_pin = board.GP15
+i2c = busio.I2C(scl_pin, sda_pin)
+display_bus = displayio.I2CDisplay(i2c, device_address=0x3d, reset=board.GP28)
+display = adafruit_displayio_ssd1306.SSD1306(display_bus, width=128, height=64)
+led_red = digitalio.DigitalInOut(board.GP18)   #led setup
+led_red.direction = digitalio.Direction.OUTPUT
+
+mpu = adafruit_mpu6050.MPU6050(i2c, address=0x68) #accelerometer
+
+
+while True:
+    print(mpu.acceleration)   #say the values
+    time.sleep(.5)
+    print("Gyro X:%.2f, Y: %.2f, Z: %.2f rad/s" % (mpu.gyro))
+    splash = displayio.Group()  #create the display group
+
+    title = "ANGULAR VELOCITY" #add title block to display group
+    text_area = label.Label(terminalio.FONT, text=title, color=0xFFFF00, x=5, y=5)
+    splash.append(text_area) 
+
+    title = f"x: {mpu.gyro[0]}" 
+    text_area = label.Label(terminalio.FONT, text=title, color=0xFFFF00, x=5, y=15) # determines and prints x value
+    splash.append(text_area)  
+    
+    title = f"y: {mpu.gyro[0]}" 
+    text_area = label.Label(terminalio.FONT, text=title, color=0xFFFF00, x=5, y=30) # figures and and says y value
+    splash.append(text_area) 
+
+    title = f"z: {mpu.gyro[0]}" 
+    text_area = label.Label(terminalio.FONT, text=title, color=0xFFFF00, x=5, y=45) # same thing with z
+    splash.append(text_area)
+
+
+    display.show(splash) #send display group to screen
+    if mpu.acceleration[0] < -9 or mpu.acceleration[0] > 9:
+        led_red.value = True  #at 90 degrees led is on
+
+    else:
+        led_red.value = False  #if not led is off
+```
+### Wiring
+
+[Wiring Diagram](images/IMG_9303.jpg)
+
+### Reflection
+
+I forgot to use the code to find the addresses of the devices so that tripped me up for a while. To find the addresses, run this code and be sure to check which address is for each device. Also be sure to check your wiring because i2c wiring is always off 2 pins. Additionally i felt the wiring was a little tricky as the OLED screen uses different pin inputs and outputs and i had to make sure to line up the correct Data and Rst pins.
 
 &nbsp;
 
