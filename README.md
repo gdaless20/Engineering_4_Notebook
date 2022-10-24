@@ -331,68 +331,266 @@ I forgot to use the code to find the addresses of the devices so that tripped me
 
 ### Assignment Description
 
+I had to get my serial monitor to take my chosen coordinates of a triangl and tell me the area.
 
 ### Evidence 
 
-![evidence]()  
+![evidence](images/gif3Slayt.gif)  
 
 ### Code
 ```
+import math
+def tri_area(x1, y1, x2, y2, x3, y3):
+    niceAreaValue = (abs(x1*(y2-y3)+x2*(y3-y1)+x3*(y1-y2)))/2   # the math is mathing
+    print(f"The area of the triangle with vertices ({x1}, {y1}), ({x2}, {y2}), ({x3}, {y3}) is {niceAreaValue}")  # print coordinates so you can fill it out
+while True:
+    try:
+        txt1 = input("Input coord set 1 (x,y)") # input coordinates
+        set1 = txt1.split(",")
 
-```
+        a1 = float(set1[0])
+        b1 = float(set1[1])
 
-### Reflection
+        txt2 = input("Input coord set 2 (x,y)")  # input coordinates
+        set2 = txt2.split(",")
+
+        a2 = float(set2[0])
+        b2 = float(set2[1])
+
+        txt3 = input("Input coord set 3 (x,y)") # input coordinates
+        set3 = txt3.split(",")
+
+        a3 = float(set3[0])
+        b3 = float(set3[1])
+
+        tri_area(a1, b1, a2, b2, a3, b3)
+
+except:
+        print("Please input valid coordinates (remember format x,y)")  # if u suck, it lets you know
+Reflection
+Using Try, you can input different coordinates and it allows you to try them, however you can use except with it so that when incorrect coordinates are used it stops the code and tells you to retry. This is convenient and fairly simple to use which makes it something you can use in mnay different code setups. The area formulas take your given coordinates and do the math of getting the triangle area for you, saving you time and braincells.
+
 
 ## Landing Area pt 2
 
 ### Assignment Description
 
+I had to get my serial monitor to take my chosen coordinates of a triangle and tell me the area and then graph it on the oled screen.
 
 ### Evidence 
 
-![evidence]()  
+![evidence](images/fu1.gif)  
 
 ### Code
 ```
+import math
+import board
+from adafruit_display_shapes.triangle import Triangle
+from adafruit_display_shapes.line import Line
+from adafruit_display_shapes.circle import Circle  #import shiz
+import displayio
+import adafruit_displayio_ssd1306
+import busio
 
+displayio.release_displays()
+sda_pin = board.GP14
+scl_pin = board.GP15
+i2c = busio.I2C(scl_pin, sda_pin)  # setting stuff up
+
+display_bus = displayio.I2CDisplay(i2c, device_address=0x3d, reset=board.GP19)
+display = adafruit_displayio_ssd1306.SSD1306(display_bus, width=128, height=64) # screen setup
+
+
+
+def tri_area(x1, y1, x2, y2, x3, y3):
+    niceAreaValue = (abs(x1*(y2-y3)+x2*(y3-y1)+x3*(y1-y2)))/2  #these are my triangle coordinates
+    print(f"The area of the triangle with vertices ({x1}, {y1}), ({x2}, {y2}), ({x3}, {y3}) is {niceAreaValue}")  # Area with vertices
+while True:
+    try:
+        txt1 = input("Input coord set 1 (x,y)")  #COORDINATES
+        set1 = txt1.split(",")
+
+        a1 = float(set1[0])
+        b1 = float(set1[1])
+
+        txt2 = input("Input coord set 2 (x,y)")
+        set2 = txt2.split(",")
+
+        a2 = float(set2[0])
+        b2 = float(set2[1])
+
+        txt3 = input("Input coord set 3 (x,y)")
+        set3 = txt3.split(",")
+
+        a3 = float(set3[0])
+        b3 = float(set3[1])
+
+        tri_area(a1, b1, a2, b2, a3, b3)  #area
+
+        c1 = int(a1)
+        d1 = int(b1)
+
+        c2 = int(a2)
+        d2 = int(b2)
+
+        c3 = int(a3)
+        d3 = int(b3)
+
+        splash = displayio.Group()
+
+        hline = Line(0, 32, 128, 32, color=0xFFFF00)
+        splash.append(hline)
+
+        hline = Line(64, 64, 64, 0, color=0xFFFF00)
+        splash.append(hline)
+
+        circle = Circle(64, 32, 6, outline=0xFFFF00)  #sets up size too
+        splash.append(circle)
+
+
+        triangle = Triangle(c1, d1, c2, d2, c3, d3, outline=0xFFFF00)  #area mATHING
+        splash.append(triangle)
+        display.show(splash)
+    except:
+        print("Please input valid coordinates (remember format x,y)") #u suck, fix it
 ```
+### Wiring
+
+![evidence](images/IMG_9306.jpg)  
+
 
 ### Reflection
+
+Our biggest issue was not being able to see our triangle on the screen because our screen's x and y scale was different then expected. Once we adjusted to fit the screen, our coordinates made a nice triangle that was clearly visible on the screen. We adjusted the location of the triangles by adding numbers to the hline which moved the trianlges into visible quadrants of the screen.
 
 
 ## Morse Code pt 1
 
 ### Assignment Description
 
+I had to write code so that whatever message you type in is then translated into morse code.
 
 ### Evidence 
 
-![evidence]()  
+![evidence](images/cheese1.gif)  
 
 ### Code
 ```
+MORSE_CODE = { 'A':'.-', 'B':'-...',  #dictionary
+    'C':'-.-.', 'D':'-..', 'E':'.',
+    'F':'..-.', 'G':'--.', 'H':'....',
+    'I':'..', 'J':'.---', 'K':'-.-',
+    'L':'.-..', 'M':'--', 'N':'-.',
+    'O':'---', 'P':'.--.', 'Q':'--.-',
+    'R':'.-.', 'S':'...', 'T':'-',
+    'U':'..-', 'V':'...-', 'W':'.--',
+    'X':'-..-', 'Y':'-.--', 'Z':'--..',
+    '1':'.----', '2':'..---', '3':'...--',
+    '4':'....-', '5':'.....', '6':'-....',
+    '7':'--...', '8':'---..', '9':'----.',
+    '0':'-----', ',':'--..--', '.':'.-.-.-',
+    '?':'..--..', '/':'-..-.', '-':'-....-',
+    '(':'-.--.', ')':'-.--.-'}
+
+
+
+mouse1 = input("Mouse code set 1 (x,y)")  #input
+mouse1 = mouse1.upper() #make things uppercase
+
+cheese = " " #total strings
+
+for letter in mouse1: # use MORSE_CODE[letter] here to translate from input into morse code
+   cheese = cheese + (MORSE_CODE[letter]) + " " #stacks letters
+
+print(cheese) #write it
 
 ```
 
 ### Reflection
 
+My variables may seem confusing at first, but essentially Cheese is the strings (string cheese) and connects them so that everything is more smoothly connected. Mouse is the alphabet and how the code works together. Using a dictionary is convenient because it allows you to use many variables and in this case, it allows you to use any letter of the alphabet and number/character to express a message.
 
 ## Morse Code pt 2
 
 ### Assignment Description
 
+I had to write code so that when you type a mesage into the terminal, it's translated into morse code and then an LED blinks to spell out the message.
 
 ### Evidence 
 
-![evidence]()  
+![evidence](images/cheesestring.gif)  
 
 ### Code
 ```
+import board
+import digitalio
+import time #imports
 
+MORSE_CODE = { 'A':'.-', 'B':'-...',  #dictionary, goes on top
+    'C':'-.-.', 'D':'-..', 'E':'.',
+    'F':'..-.', 'G':'--.', 'H':'....',
+    'I':'..', 'J':'.---', 'K':'-.-',
+    'L':'.-..', 'M':'--', 'N':'-.',
+    'O':'---', 'P':'.--.', 'Q':'--.-',
+    'R':'.-.', 'S':'...', 'T':'-',
+    'U':'..-', 'V':'...-', 'W':'.--',
+    'X':'-..-', 'Y':'-.--', 'Z':'--..',
+    '1':'.----', '2':'..---', '3':'...--',
+    '4':'....-', '5':'.....', '6':'-....',
+    '7':'--...', '8':'---..', '9':'----.',
+    '0':'-----', ',':'--..--', '.':'.-.-.-',
+    '?':'..--..', '/':'-..-.', '-':'-....-',
+    ' ': '/',
+    '(':'-.--.', ')':'-.--.-'}
+
+modifier = 0.25
+dot_time = 1*modifier
+dash_time = 3*modifier  #timing of flashes
+between_taps = 1*modifier
+between_letters = 3*modifier
+between_words = 7*modifier
+
+led1 = digitalio.DigitalInOut(board.GP13)
+led1.direction = digitalio.Direction.OUTPUT #led setup
+
+mouse1 = input("Mouse code set 1 (x,y)")  #input
+mouse1 = mouse1.upper() #make things uppercase
+
+cheese = " " #total strings
+
+for letter in mouse1: # use MORSE_CODE[letter] here to translate from input into morse code
+   cheese = cheese + (MORSE_CODE[letter]) + " " #stacks letters
+
+print(cheese) #write it
+
+for letter in cheese: #sets up spaces bwteen instances
+    if letter == ".": #for dots
+        led1.value = True #led turns on
+        time.sleep(dot_time) #sleeps for the set time for dots
+        led1.value = False #led is off
+
+    if letter == "-": #now for dashes
+        led1.value = True #led on
+        time.sleep(dash_time) #dash sleep time
+        led1.value = False #led off
+
+    if letter == " ": #for spaces
+        time.sleep(between_letters)  #rest for set space time between letters
+
+    if letter == "/":  #for spaces between words which show as dashes
+        time.sleep(between_words) #rest between words for set time
+
+    
+    time.sleep(dot_time) #stop led between uses of the code
 ```
+
+### Wiring
+
+![evidence](images/cheesestring.gif)  
 
 ### Reflection
 
+This assignment justs builds off of all the previous ones which means you can figure a lot of things out on your own and fix your mistakes as you move through it.After adding Mr. Miller's code for the spacing between characters, I added an led using code from servo.py further up in my notebook. In order to actually use the code for the spacing, I used if statements to turn the led on and off and set the spacing. There was only a little wiring for the assignment which made it pretty simple.
 
 &nbsp;
 
