@@ -25,7 +25,7 @@ print("LAUNCHY")     #say this at the end of 10s
 
 ### Reflection
 
-We had some difficulty getting the countdown to count down from ten as opposed to counting up from 1, but other than that, this task was pretty straightforward. Another minor issue was figuring out the best way to run the pico, as this was our first assignment. Thankfully there was no wiring, and we could get this assignment done relatively quickly.
+We had some difficulty getting the countdown to count down from ten as opposed to counting up from 1, but other than that, this task was pretty straightforward. Another minor issue was figuring out the best way to run the pico, as this was our first assignment. Thankfully there was no wiring, and we could get this assignment done relatively quickly. We got a nice introduction to pico and learned the basics.
 
 ## Launch Pad Part 2 (Lights)
 
@@ -206,7 +206,7 @@ while True:
 
 ### Reflection
 
-After downloading the necessary folder modules needed for this code, it goes pretty smoothly. You need to have Acceleration, temperature, and gyro in order to find all the values for the assignment. Don't be alarmed by the ~9.8 because that's just gravity and is not going to mess with your values or anything. There was no wiring so i helped ellen with doing research on how to complete the code.
+After downloading the necessary folder modules needed for this code, it goes pretty smoothly. You need to have Acceleration, temperature, and gyro in order to find all the values for the assignment. Don't be alarmed by the ~9.8 because that's just the force of gravity and is not going to mess with your values or anything. There was no wiring so i helped ellen with doing research on how to complete the code.
 
 ## Crash Avoidance Part 2
 
@@ -326,13 +326,13 @@ while True:
 
 ### Reflection
 
-I forgot to use the code to find the addresses of the devices so that tripped me up for a while. To find the addresses, run this code and be sure to check which address is for each device. Also be sure to check your wiring because i2c wiring is always off 2 pins. Additionally i felt the wiring was a little tricky as the OLED screen uses different pin inputs and outputs and i had to make sure to line up the correct Data and Rst pins.
+We forgot to use the code to find the addresses of the devices so that tripped me up for a while. To find the addresses, run this code and be sure to check which address is for each device. Also be sure to check your wiring because i2c wiring is always off 2 pins. Additionally i felt the wiring was a little tricky as the OLED screen uses different pin inputs and outputs and i had to make sure to line up the correct Data and Rst pins. I learned how to wire up an OLED screen and we plan to use it in our Pi in the sky project.
 
 ## Landing Area pt 1
 
 ### Assignment Description
 
-I had to get my serial monitor to take my chosen coordinates of a triangl and tell me the area.
+I had to get my serial monitor to take my chosen coordinates of a triangle and tell me the area.
 
 ### Evidence 
 
@@ -370,8 +370,9 @@ except:
         print("Please input valid coordinates (remember format x,y)")  # if u suck, it lets you know
 ```
 
-Reflection
-Using Try, you can input different coordinates and it allows you to try them, however you can use except with it so that when incorrect coordinates are used it stops the code and tells you to retry. This is convenient and fairly simple to use which makes it something you can use in mnay different code setups. The area formulas take your given coordinates and do the math of getting the triangle area for you, saving you time and braincells.
+### Reflection
+
+Using Try, you can input different coordinates and it allows you to try them, however you can use except with it so that when incorrect coordinates are used it stops the code and tells you to retry. This is convenient and fairly simple to use which makes it something you can use in mnay different code setups. The area formulas take your given coordinates and do the math of getting the triangle area for you. This will be helpful for our final project to calculate the area of where we want our platform to land.
 
 
 ## Landing Area pt 2
@@ -466,7 +467,7 @@ while True:
 
 ### Reflection
 
-Our biggest issue was not being able to see our triangle on the screen because our screen's x and y scale was different then expected. Once we adjusted to fit the screen, our coordinates made a nice triangle that was clearly visible on the screen. We adjusted the location of the triangles by adding numbers to the hline which moved the trianlges into visible quadrants of the screen.
+Our biggest issue was not being able to see our triangle on the screen because our screen's x and y scale was different then expected. Once we adjusted to fit the screen, our coordinates made a nice triangle that was clearly visible on the screen. We adjusted the location of the triangles by adding numbers to the hline which moved the trianlges into visible quadrants of the screen. I had to double check that the wiring was still correct on our bread board.
 
 
 ## Morse Code pt 1
@@ -514,7 +515,7 @@ print(cheese) #write it
 
 ### Reflection
 
-My variables may seem confusing at first, but essentially Cheese is the strings (string cheese) and connects them so that everything is more smoothly connected. Mouse is the alphabet and how the code works together. Using a dictionary is convenient because it allows you to use many variables and in this case, it allows you to use any letter of the alphabet and number/character to express a message.
+My variables may seem confusing at first, but essentially Cheese is the strings and connects them so that everything is more smoothly connected. Mouse is the alphabet and how the code works together. Using a dictionary is convenient because it allows you to use many variables and in this case, it allows you to use any letter of the alphabet and number/character to express a message. There was no wiring in this assignment which made it go quick. We learned how to use the Morse code library which can be helpful in our future project.
 
 ## Morse Code pt 2
 
@@ -597,7 +598,7 @@ for letter in cheese: #sets up spaces bwteen instances
 
 ### Reflection
 
-This assignment justs builds off of all the previous ones which means you can figure a lot of things out on your own and fix your mistakes as you move through it.After adding Mr. Miller's code for the spacing between characters, I added an led using code from servo.py further up in my notebook. In order to actually use the code for the spacing, I used if statements to turn the led on and off and set the spacing. There was only a little wiring for the assignment which made it pretty simple.
+This assignment justs builds off of all the previous ones which means you can figure a lot of things out on your own and fix your mistakes as you move through it. After using Mr. Miller's code from canvas for the spacing between characters, I added an led using code from servo.py further up in my notebook. In order to actually use the code for the spacing, I used if statements to turn the led on and off and set the spacing. There was only a little wiring for the assignment which made it pretty simple. Overall in all the assignments i have advanced my knowledge in coding and wiring which will be veryu helpful in my final project. Im very excited to start CAD as i prefer it to coding/wiring anyday!
 
 &nbsp;
 
