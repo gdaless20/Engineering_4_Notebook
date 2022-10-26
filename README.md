@@ -594,7 +594,7 @@ for letter in cheese: #sets up spaces bwteen instances
 
 ### Wiring
 
-![evidence](images/cheesestring.gif)  
+![evidence](images/uhiydfsjhbfdgjdhgjvfdsgfdjkhgvsdfd.jpg)  
 
 ### Reflection
 
