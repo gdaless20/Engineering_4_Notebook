@@ -602,6 +602,25 @@ This assignment justs builds off of all the previous ones which means you can fi
 
 &nbsp;
 
+## FEA pt1
+
+### Assignment Description
+
+Shrey and i had to build a bridge to support mass.
+
+### Onshape 
+
+![Onshape](https://cvilleschools.onshape.com/documents/cb8b9bb78bdf1ee50d84757e/w/4ef288967c0ae586b1b96682/e/b2ab5e21880641ecd136b936)  
+
+###Evidence
+
+![img](images/fea1.PNG)
+
+
+### Reflection
+
+We designed a beam to be able to withsand bending and an unknown ammount of mass. We will add weights until the bridghe either snaps or bends past a certain point. We learned that simple is sometimes better than a complicated design.
+
 ## Media Test
 
 Your readme will have various images and gifs on it. Upload a test image and test gif to make sure you've got the process figured out. Pick whatever image and gif you want!
